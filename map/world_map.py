@@ -12,6 +12,6 @@ class WorldMap:
     
     #add more here to manage map
 
-if __name__ == "__main__":
-    test_map = WorldMap(10, 10)
+if __name__ == "__main__": #this ensures that it only runs if it is executed directly, not as a module!
+    test_map = WorldMap(2, 2)
     test_map.display()
