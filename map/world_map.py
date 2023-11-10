@@ -1,4 +1,3 @@
-from 
 
 class WorldMap:
     def __init__(self, width, height):
