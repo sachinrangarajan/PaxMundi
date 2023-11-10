@@ -17,7 +17,7 @@ def main():
             os.system('cls')
             game_map.display()            
             print(
-                    "The player army, the " + player_army.name + " is at x: " + str(player_army.x) + ", y: " + str(player_army.y)
+                    "The player army, the " + player_army.name + ", is at x: " + str(player_army.x) + ", y: " + str(player_army.y)
                 )
             
             user_input = input("Please enter your command: ")
