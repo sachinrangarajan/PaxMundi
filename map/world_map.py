@@ -1,3 +1,5 @@
+from tribes.army import Army
+
 class WorldMap:
     def __init__(self, width, height):
         #initialize the map with the given dimensions
@@ -13,13 +15,29 @@ class WorldMap:
     #add more here to manage map
 
     def add_army(self, army):
-        # Place an army on the map at its coordinates
-        if (0 <= army.x < self.width) and (0 <= army.y < self.height):
-            self.grid[army.y][army.x] = army
+        self.grid[army.y][army.x] = army
+        # Place an army on the map at its coordinates. assumes coordinates are valid.
+
+    def move_army(self, army, dx, dy):
+        # Calculate new position
+        new_x = army.x + dx
+        new_y = army.y + dy
+
+        # Check if the new position is within the map boundaries
+        if 0 <= new_x < self.width and 0 <= new_y < self.height:
+            # First, remove the army from its current location
+            self.grid[army.y][army.x] = None
+
+            # Update the army's position
+            army.move(dx, dy)
+
+            # Place the army at the new location
+            self.add_army(army)
         else:
             print("That position is off the map!")
 
-    def move_army(self, army, dx, dy):
+
+        
         # Move an army to a new location on the map
         # First, remove the army from its current location
         self.grid[army.y][army.x] = None

@@ -1,20 +1,22 @@
 import os
 from map.world_map import WorldMap
-from units.army import Army
+from tribes.army import Army
 
 def main():
     """Main game loop."""
+    #create an instance of the WorldMap Class with the desired imensions
+    game_map = WorldMap(4, 4)
+
  # Create an army for testing
     player_army = Army("Red Brigade", 0, 0)
     game_map.add_army(player_army)
-
-    #create an instance of the WorldMap Class with the desired imensions
-    game_map = WorldMap(11, 11)
-
     while True:
         os.system('cls')
         game_map.display()
-
+        print(
+                "The player army, the " + player_army.name + " is at x: " + str(player_army.x) + ", y: " + str(player_army.y)
+            )
+        
         user_input = input("Enter your command: ")
         if user_input == "quit":
             break #exit game loop
@@ -30,20 +32,9 @@ def main():
                 dx = -1
             elif direction == "right":
                 dx = 1
-            
             game_map.move_army(player_army, dx, dy)
-
         # ... (rest of your game loop)
-
-
-
         #here we would handle command for muving units etc.
-
-
-
-
-
-
         #placeholder to update change game state
         # game_map.update()
 
