@@ -1,5 +1,4 @@
 import os
-
 from map.world_map import WorldMap
 
 def main():
@@ -24,3 +23,13 @@ def main():
 #only run when we execute this code directly, but then again - it should always be executed directly since this is the main file!
 if __name__ == "__main__":
     main()
+
+
+
+
+"""
+Sorry for the interruption. My questions are
+1) 
+
+
+"""
