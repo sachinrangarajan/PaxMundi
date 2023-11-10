@@ -22,31 +22,15 @@ class WorldMap:
         # Calculate new position
         new_x = army.x + dx
         new_y = army.y + dy
-
         # Check if the new position is within the map boundaries
         if 0 <= new_x < self.width and 0 <= new_y < self.height:
             # First, remove the army from its current location
             self.grid[army.y][army.x] = None
-
-            # Update the army's position
             army.move(dx, dy)
-
             # Place the army at the new location
             self.add_army(army)
         else:
             print("That position is off the map!")
-
-
-        
-        # Move an army to a new location on the map
-        # First, remove the army from its current location
-        self.grid[army.y][army.x] = None
-
-        # Update the army's position
-        army.move(dx, dy)
-
-        # Place the army at the new location
-        self.add_army(army)
     
 if __name__ == "__main__": #this ensures that it only runs if it is executed directly, not as a module!
     test_map = WorldMap(2, 2)

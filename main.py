@@ -5,7 +5,7 @@ from tribes.army import Army
 def main():
     """Main game loop."""
     #create an instance of the WorldMap Class with the desired imensions
-    game_map = WorldMap(4, 4)
+    game_map = WorldMap(5, 5)
 
  # Create an army for testing
     player_army = Army("Red Brigade", 0, 0)
@@ -34,9 +34,8 @@ def main():
                 dx = 1
             game_map.move_army(player_army, dx, dy)
         # ... (rest of your game loop)
-        #here we would handle command for muving units etc.
         #placeholder to update change game state
-        # game_map.update()
+        #game_map.update()
 
 #only run when we execute this code directly, but then again - it should always be executed directly since this is the main file!
 if __name__ == "__main__":
