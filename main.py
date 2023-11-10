@@ -39,8 +39,10 @@ def main():
                 game_map.move_army(player_army, dx, dy)
         except ValueError as e:
             print(e)
-            input("Press Enter to continue...")
-        
+            print("Resetting, in...")
+            for i in range(3):
+                time.sleep(1)
+                print(3-i)
         except Exception as e:
             print(f"An unexpected error occurred: {e}")
             input("Press Enter to continue...")
