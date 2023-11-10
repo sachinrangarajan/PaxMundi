@@ -4,7 +4,7 @@ class Army:
         self.x = x
         self.y = y
 
-    def move(self, dx, dy)
+    def move(self, dx, dy):
         # move the army by dx, dy steps
         self.x += dx
         self.y += dy

@@ -1,4 +1,4 @@
-from units.army import Army
+from ..units.army import Army
 
 class WorldMap:
     def __init__(self, width, height):
@@ -13,7 +13,7 @@ class WorldMap:
             print(" " .join(["[ ]" if cell is None else "[X]" for cell in row]))
     
     #add more here to manage map
-    
+
     def add_army(self, army):
         # Place an army on the map at its coordinates
         if (0 <= army.x < self.width) and (0 <= army.y < self.height):
