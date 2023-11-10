@@ -1,4 +1,3 @@
-
 class WorldMap:
     def __init__(self, width, height):
         #initialize the map with the given dimensions
@@ -31,11 +30,6 @@ class WorldMap:
         # Place the army at the new location
         self.add_army(army)
     
-
-
-
-
-
 if __name__ == "__main__": #this ensures that it only runs if it is executed directly, not as a module!
     test_map = WorldMap(2, 2)
     test_map.display()
