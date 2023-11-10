@@ -1,6 +1,6 @@
 import os
 from map.world_map import WorldMap
-from .units.army import Army
+from units.army import Army
 
 def main():
     """Main game loop."""
