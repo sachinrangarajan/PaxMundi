@@ -1,19 +1,26 @@
-from tribes.army import Army
+import random
 
+from tribes.army import Army
 class WorldMap:
     def __init__(self, width, height):
         #initialize the map with the given dimensions
         self.width = width
         self.height = height
-        self.grid = [[None for _ in range(width)] for _ in range(height)]
+        self.grid = self.generate_random_map()
+
+    def generate_random_map(self):
+        # Creation Myth: In the beginning, the world was a blank canvas...with trumpets and horns of Purcell hearlding a new day
+        terrain = ['M', 'R', 'T', ' ']  # M: Mountain, R: River, T: Forest, ' ': Neutral
+        return [[random.choice(terrain) for _ in range(self.width)] for _ in range(self.height)]
     
     def display(self):
-        #temporary method to visualize the map in the console
+    # The Scroll of Sight: Unveiling the hidden lands...
         for row in self.grid:
-            print(" " .join(["[ ]" if cell is None else "[X]" for cell in row]))
-    
-    #add more here to manage map
+            print(' '.join(['[{}]'.format(cell) for cell in row]))
 
+    #add more here to manage map
+    
+    
     def add_army(self, army):
         self.grid[army.y][army.x] = army
         # Place an army on the map at its coordinates. assumes coordinates are valid.
