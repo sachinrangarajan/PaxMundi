@@ -1,4 +1,6 @@
 import os
+import time
+
 from map.world_map import WorldMap
 from tribes.army import Army
 
@@ -11,28 +13,37 @@ def main():
     player_army = Army("Red Brigade", 0, 0)
     game_map.add_army(player_army)
     while True:
-        os.system('cls')
-        game_map.display()
-        print(
-                "The player army, the " + player_army.name + " is at x: " + str(player_army.x) + ", y: " + str(player_army.y)
-            )
-        
-        user_input = input("Enter your command: ")
-        if user_input == "quit":
-            break #exit game loop
+        try:
+            os.system('cls')
+            game_map.display()            
+            print(
+                    "The player army, the " + player_army.name + " is at x: " + str(player_army.x) + ", y: " + str(player_army.y)
+                )
+            
+            user_input = input("Please enter your command: ")
 
-        if user_input.startswith("move"):
-            _, direction = user_input.split()
-            dx, dy = 0, 0
-            if direction == "up":
-                dy = -1
-            elif direction == "down":
-                dy = 1
-            elif direction == "left":
-                dx = -1
-            elif direction == "right":
-                dx = 1
-            game_map.move_army(player_army, dx, dy)
+            if user_input == "quit":
+                break #exit game loop
+
+            if user_input.startswith("move"):
+                _, direction = user_input.split()
+                dx, dy = 0, 0
+                if direction == "up":
+                    dy = -1
+                elif direction == "down":
+                    dy = 1
+                elif direction == "left":
+                    dx = -1
+                elif direction == "right":
+                    dx = 1
+                game_map.move_army(player_army, dx, dy)
+        except ValueError as e:
+            print(e)
+            input("Press Enter to continue...")
+        
+        except Exception as e:
+            print(f"An unexpected error occurred: {e}")
+            input("Press Enter to continue...")
         # ... (rest of your game loop)
         #placeholder to update change game state
         #game_map.update()

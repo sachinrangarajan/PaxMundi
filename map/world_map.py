@@ -31,6 +31,7 @@ class WorldMap:
             self.add_army(army)
         else:
             print("That position is off the map!")
+            raise ValueError("tried to do some out of bounds shenanigans")
     
 if __name__ == "__main__": #this ensures that it only runs if it is executed directly, not as a module!
     test_map = WorldMap(2, 2)
