@@ -10,7 +10,7 @@ class WorldMap:
 
     def generate_random_map(self):
         # Creation Myth: In the beginning, the world was a blank canvas...with trumpets and horns of Purcell hearlding a new day
-        terrain = ['M', 'R', 'T', ' ']  # M: Mountain, R: River, T: Forest, ' ': Neutral
+        terrain = ['M', 'W', 'T', ' ']  # M: Mountain, W: Water, T: Forest, ' ': Neutral
         return [[random.choice(terrain) for _ in range(self.width)] for _ in range(self.height)]
     
     def display(self):
