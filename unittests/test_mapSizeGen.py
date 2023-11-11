@@ -6,7 +6,7 @@ class TestMapSizeGeneration(unittest.TestCase):
     def test_map_size_generation(self):
         # Start with a small map size
         width, height = 3, 3
-        max_width, max_height = 120, 40
+        max_width, max_height = 420, 420
         mysterious_failure_size = 42  # The cosmic number from Douglas Adams
 
         while width <= max_width or height <= max_height:

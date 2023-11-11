@@ -12,14 +12,18 @@ class WorldMap:
         # Creation Myth: In the beginning, the world was a blank canvas...with trumpets and horns of Purcell hearlding a new day
         terrain = ['M', 'W', 'T', ' ']  # M: Mountain, W: Water, T: Forest, ' ': Neutral
         return [[random.choice(terrain) for _ in range(self.width)] for _ in range(self.height)]
-    
+
     def display(self):
         for y in range(self.height):
             row_display = []
             for x in range(self.width):
-                cell = self.grid[x][y]  # Accessing cell at coordinates (x, y)
-                cell_display = '[{}]'.format(cell.symbol() if isinstance(cell, Army) else cell)
-                row_display.append(cell_display)
+                try:
+                    cell = self.grid[x][y]  # Accessing cell at coordinates (x, y)
+                    cell_display = '[{}]'.format(cell.symbol() if isinstance(cell, Army) else cell)
+                    row_display.append(cell_display)
+                except IndexError:
+                    print(f"IndexError at x={x},y={y}")
+                    raise
             print(' '.join(row_display))
 
     #add more here to manage map

@@ -13,8 +13,8 @@ def main():
     player_army = Army("Red Brigade", 0, 0)
     game_map.add_army(player_army)
     while True:
+        os.system('cls')
         try:
-            os.system('cls')
             game_map.display()            
             print(
                     "The player army, the " + player_army.name + ", is at x: " + str(player_army.x) + ", y: " + str(player_army.y)
