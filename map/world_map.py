@@ -22,7 +22,6 @@ class WorldMap:
                 row_display.append(cell_display)
             print(' '.join(row_display))
 
-
     #add more here to manage map
     
     
