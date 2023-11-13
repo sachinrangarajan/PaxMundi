@@ -7,7 +7,9 @@ from tribes.army import Army
 def main():
     """Main game loop."""
     #create an instance of the WorldMap Class with the desired dimensions
-    game_map = WorldMap(15, 15)
+    game_map = WorldMap(15, 15) #
+    for i in 29:
+        print:("hi")
 
  # Create an army for testing
     player_army = Army("Red Brigade", 0, 0)
