@@ -1,0 +1,70 @@
+Pax Mundi Development Plan
+Overview
+Project Duration: 11/14/2023 - 1/11/2024
+Objective: Develop Pax Mundi 1.0, a hybrid risk/chess game, with an overworld map and a battle map, focused on achieving world peace by protecting key natural resources.
+
+Phase 1: Initial Setup and Overworld Map Development
+Duration: 11/14/2023 - 11/19/2023
+Goals:
+Get comfortable with Python, GitHub, Test-Driven Development (TDD), debugging, Visual Studio Code.
+Develop a basic version of the overworld map, including terrain generation, army generation and movement, resource collection, and initial lore.
+Outcomes: Familiarity with Python, TDD, large codebases, and effective use of ChatGPT as a coding mentor.
+
+Phase 2: Debugging and Refining Overworld Map
+Duration: 11/20/2023 - 11/26/2023
+Goals:
+Debug, refactor, and comment code.
+Finalize features for the overworld map.
+Outcomes: A basic functional game allowing army movements and resource protection.
+
+Phase 3: AI Development and Playability
+Duration: 11/27/2023 - 12/3/2023
+Goals:
+Develop a basic AI for the opposing army.
+Enhance the game's playability.
+Outcomes: PaxMundi V 0.1, a playable version of the game.
+
+Phase 4: Testing, Debugging, and Game Mechanics Refinement
+Duration: 12/4/2023 - 12/11/2023
+Goals:
+Conduct extensive testing and debugging.
+Refine game mechanics and presentation.
+Outcomes: A game ready for family testing and feedback.
+
+Phase 5: Chess Battle System and Azure Introduction
+Duration: 12/12/2023 - 12/18/2023
+Goals:
+Develop a full implementation of chess vs. AI.
+Begin learning about Azure and deploy PaxMundi V 0.1 to the cloud.
+Outcomes: Understanding of Azure and a cloud-hosted basic game version.
+
+Phase 6: Finalizing Chess Implementation and Azure Hosting
+Duration: 12/19/2023 - 12/25/2023
+Goals:
+Complete the chess implementation.
+Host Pax Mundi 0.1 on Azure.
+Outcomes: A fully functional game version on the cloud.
+
+Phase 7: Documentation and Process Evaluation
+Duration: 12/26/2023 - 1/2/2024
+Goals:
+Focus on documentation and process notes.
+Evaluate the next steps and revise the plan accordingly.
+Outcomes: Comprehensive documentation and a revised plan for the next steps.
+
+Phase 8: Integration and iOS Development Initiation
+Duration: 1/3/2024 - 1/10/2024
+Goals:
+Integrate chess mechanics into PaxMundi 0.1.
+Begin iOS development of the game.
+Outcomes: A more integrated game version and initiation of iOS development.
+
+Conclusion: 1/11/2024
+Achievements:
+Proficiency in Python, coding, development, TDD, and using ChatGPT.
+Acquaintance with Microsoft Azure.
+Reacquaintance with iOS development.
+Deliverables:
+A fully functional game of Pax Mundi. 
+Pax Mundi 0.1 on the cloud, available for family testing and play.
+Pax Mundi 0.2 (iOS version) in development.

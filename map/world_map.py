@@ -1,6 +1,6 @@
 import random
-
 from tribes.army import Army
+
 class WorldMap:
     def __init__(self, width, height):
         #initialize the map with the given dimensions
@@ -24,7 +24,9 @@ class WorldMap:
                 except IndexError:
                     print(f"IndexError at x={x},y={y}")
                     raise
-            print(' '.join(row_display))
+            print(''.join(row_display))
+
+        
 
     #add more here to manage map
     

@@ -3,19 +3,17 @@ import time
 
 from map.world_map import WorldMap
 from tribes.army import Army
+from ui import uiUtils
 
 def main():
     """Main game loop."""
     #create an instance of the WorldMap Class with the desired dimensions
-    game_map = WorldMap(15, 15) #
-    for i in 29:
-        print:("hi")
+    game_map = WorldMap(15, 15)
 
  # Create an army for testing
     player_army = Army("Red Brigade", 0, 0)
     game_map.add_army(player_army)
     while True:
-        os.system('cls')
         try:
             game_map.display()            
             print(
