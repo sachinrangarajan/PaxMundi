@@ -15,7 +15,7 @@ def clear_screen():
         os.system('clear')
 
 def printArmyStatus(inputArmy):
-    print("The army, called the" + inputArmy.name + ", is at x: " + str(inputArmy.x) + ", y: " + str(inputArmy.y))
+    print("The army called the " + inputArmy.name + " is at x: " + str(inputArmy.x) + ", y: " + str(inputArmy.y))
 
 def updateyMap(inputMap):
     clear_screen()
@@ -23,7 +23,7 @@ def updateyMap(inputMap):
         row_display = []
         for x in range(inputMap.width):
             try:
-                cell = inputMap.grid[x][y]  # Accessing cell at coordinates (x, y)
+                cell = inputMap.grid[y][x]  # Accessing cell at coordinates (x, y)
                 cell_display = '[{}]'.format(cell.symbol() if isinstance(cell, Army) else cell)
                 row_display.append(cell_display)
             except IndexError:

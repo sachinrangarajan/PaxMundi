@@ -15,7 +15,7 @@ class WorldMap:
         return [[random.choice(terrain) for _ in range(self.width)] for _ in range(self.height)]
         
     def add_army(self, army):
-        self.grid[army.x][army.y] = army
+        self.grid[army.y][army.x] = army
         # Place an army on the map at its coordinates. assumes coordinates are valid.
 
     def move_army(self, army, dx, dy):
