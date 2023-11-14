@@ -17,6 +17,8 @@ PaxMundi 1.0 will be a hybrid risk/chess game with an overworld map like risk an
 """
 Journal of development:
 
+11/14/2020: working on refactoring the code.
+
 
 
 """
