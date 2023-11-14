@@ -16,7 +16,7 @@ def main():
 
     while True:
         try:
-            uiUtils.updateyMap(game_map)
+            uiUtils.updateMap(game_map)
             uiUtils.printArmyStatus(player_army)
             user_input = uiUtils.get_user_interaction('input_command')
             if user_input == "quit":

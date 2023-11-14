@@ -17,7 +17,7 @@ def clear_screen():
 def printArmyStatus(inputArmy):
     print("The army called the " + inputArmy.name + " is at x: " + str(inputArmy.x) + ", y: " + str(inputArmy.y))
 
-def updateyMap(inputMap):
+def updateMap(inputMap):
     clear_screen()
     for y in range(inputMap.height):
         row_display = []
