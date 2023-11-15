@@ -24,7 +24,7 @@ def updateMap(inputMap):
         for x in range(inputMap.width):
             try:
                 cell = inputMap.grid[y][x]  # Accessing cell at coordinates (x, y)
-                cell_display = '[{}]'.format(cell.symbol() if isinstance(cell, Army) else cell)
+                cell_display = '{}'.format(cell.symbol() if isinstance(cell, Army) else cell)
                 row_display.append(cell_display)
             except IndexError:
                 print(f"IndexError at x={x},y={y}")

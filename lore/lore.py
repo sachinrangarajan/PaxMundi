@@ -22,3 +22,12 @@ Journal of development:
 
 
 """
+
+
+"""Rules and gameplay
+
+This game i
+
+
+
+"""

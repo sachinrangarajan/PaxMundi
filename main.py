@@ -8,7 +8,7 @@ from ui import uiUtils
 def main():
     """Main game loop."""
     #create an instance of the WorldMap Class with the desired dimensions
-    game_map = WorldMap(45, 15)
+    game_map = WorldMap(142, 21)
 
  # Create an army for testing
     player_army = Army("Red Brigade", 0, 0)
@@ -24,13 +24,13 @@ def main():
             if user_input.startswith("move"):
                 _, direction = user_input.split()
                 dx, dy = 0, 0
-                if direction == ("west" or "left"):
+                if direction == "west" or direction == "left":
                     dy = -1
-                elif direction == ("east" or "right"):
+                elif direction == "east" or direction == "right":
                     dy = 1
-                elif direction == ("north" or "up"):
+                elif direction == "north" or direction == "up":
                     dx = -1
-                elif direction == ("south" or "down"):
+                elif direction == "south" or direction == "down":
                     dx = 1
                 else:
                     raise ValueError(f"Unknown direction: {direction}")
